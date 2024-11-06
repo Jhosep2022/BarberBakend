@@ -1,4 +1,7 @@
 package com.example.backenbarberperu.barbero;
 
-public interface BarberoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BarberoRepository extends JpaRepository<BarberoEntity, Long> {
+    BarberoEntity findByUsuarioId(Long usuarioId);
 }
